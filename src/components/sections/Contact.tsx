@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, ArrowRight, CheckCircle2, AlertCircle, ShieldCheck } from 'lucide-react';
-import { LinkedinIcon, TwitterIcon, GithubIcon, YoutubeIcon } from '../common/SocialIcons';
+import { LinkedinIcon, TwitterIcon, GithubIcon, YoutubeIcon, WhatsAppIcon } from '../common/SocialIcons';
 import { companyData, servicesData } from '../../data/consultancyData';
 import { ContactFormData } from '../../types';
 import { Button } from '../common/Button';
@@ -152,6 +152,44 @@ export const Contact: React.FC = () => {
                   </div>
                 </div>
 
+                {/* WhatsApp Instant Messaging */}
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-green-50/70 border border-green-200/80 transition-all hover:bg-green-50">
+                  <div className="w-11 h-11 rounded-xl bg-green-600 text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+                    <WhatsAppIcon className="w-6 h-6" />
+                  </div>
+                  <div className="flex-grow">
+                    <div className="flex items-center justify-between">
+                      <span className="block text-xs uppercase font-bold text-green-800 tracking-wider">
+                        WhatsApp Fast Advisory
+                      </span>
+                      <span className="inline-flex items-center gap-1 text-[10px] font-bold text-green-700 bg-green-200/60 px-2 py-0.5 rounded-full">
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-600 animate-pulse" />
+                        Online
+                      </span>
+                    </div>
+                    <a
+                      href={companyData.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-base font-bold text-brand-black hover:text-green-700 transition-colors block mt-0.5"
+                    >
+                      {companyData.whatsapp}
+                    </a>
+                    <p className="text-xs text-brand-gray-600 mt-1">
+                      Quick queries, scheduling & document dispatch via WhatsApp.
+                    </p>
+                    <a
+                      href={companyData.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-green-700 hover:text-green-800 mt-2"
+                    >
+                      <span>Start WhatsApp Chat</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+
                 {/* Address */}
                 <div className="flex items-start gap-4">
                   <div className="w-11 h-11 rounded-xl bg-brand-orange-light text-brand-orange flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -229,6 +267,15 @@ export const Contact: React.FC = () => {
                   className="w-10 h-10 rounded-lg bg-brand-gray-100 hover:bg-brand-orange hover:text-white text-brand-black flex items-center justify-center transition-colors cursor-pointer"
                 >
                   <YoutubeIcon className="w-5 h-5" />
+                </a>
+                <a
+                  href={companyData.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat on WhatsApp"
+                  className="w-10 h-10 rounded-lg bg-green-100 hover:bg-green-600 hover:text-white text-green-700 flex items-center justify-center transition-colors cursor-pointer"
+                >
+                  <WhatsAppIcon className="w-5 h-5" />
                 </a>
               </div>
             </div>

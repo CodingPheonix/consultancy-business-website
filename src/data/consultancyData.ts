@@ -16,6 +16,8 @@ export const companyData: CompanyInfo = {
   tagline: 'Transforming Business Challenges Into Opportunities.',
   email: 'advisory@vanguardconsulting.com',
   phone: '+91 98301 42890',
+  whatsapp: '+91 90514 10466',
+  whatsappUrl: 'https://wa.me/919051410466?text=Hello%20Vanguard%20Advisory%2C%20I%20would%20like%20to%20inquire%20about%20your%20consulting%20services.',
   address: 'Level 14, Platina Tower, MG Road, Sector 28, Gurugram, Haryana 122002, India',
   businessHours: 'Mon – Fri: 9:00 AM – 7:00 PM IST',
   socials: {
@@ -23,6 +25,7 @@ export const companyData: CompanyInfo = {
     twitter: 'https://twitter.com',
     github: 'https://github.com',
     youtube: 'https://youtube.com',
+    whatsapp: 'https://wa.me/919830142890?text=Hello%20Vanguard%20Advisory%2C%20I%20would%20like%20to%20inquire%20about%20your%20consulting%20services.',
   },
 };
 

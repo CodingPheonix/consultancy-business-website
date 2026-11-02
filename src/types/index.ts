@@ -90,6 +90,8 @@ export interface CompanyInfo {
   tagline: string;
   email: string;
   phone: string;
+  whatsapp: string;
+  whatsappUrl: string;
   address: string;
   businessHours: string;
   socials: {
@@ -97,6 +99,7 @@ export interface CompanyInfo {
     twitter: string;
     github: string;
     youtube: string;
+    whatsapp?: string;
   };
 }
 

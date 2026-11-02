@@ -12,6 +12,7 @@ import { Testimonials } from './components/sections/Testimonials';
 import { FAQ } from './components/sections/FAQ';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/sections/Footer';
+import { FloatingWhatsApp } from './components/common/FloatingWhatsApp';
 
 export const App: React.FC = () => {
   return (
@@ -53,6 +54,9 @@ export const App: React.FC = () => {
         {/* 12. Contact / Lead Generation Form */}
         <Contact />
       </main>
+
+      {/* Floating WhatsApp Quick Action Button */}
+      <FloatingWhatsApp />
 
       {/* 13. Footer */}
       <Footer />

@@ -43,6 +43,9 @@ describe('App SPA Integration', () => {
     // 12. Contact
     expect(screen.getByText(/Request a Diagnostic Briefing/i)).toBeInTheDocument();
 
+    // Floating WhatsApp Button
+    expect(screen.getByLabelText(/Chat with Vanguard Advisory on WhatsApp/i)).toBeInTheDocument();
+
     // 13. Footer
     expect(screen.getByText(/All rights reserved/i)).toBeInTheDocument();
   });

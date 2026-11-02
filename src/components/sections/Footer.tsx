@@ -15,6 +15,7 @@ import {
   TwitterIcon,
   GithubIcon,
   YoutubeIcon,
+  WhatsAppIcon,
 } from '../common/SocialIcons';
 import { Modal } from '../common/Modal';
 
@@ -109,6 +110,15 @@ export const Footer: React.FC = () => {
               >
                 <YoutubeIcon className="w-4 h-4" />
               </a>
+              <a
+                href={companyData.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
+                className="w-9 h-9 rounded-lg bg-brand-gray-900 hover:bg-green-600 hover:text-white text-brand-gray-400 flex items-center justify-center transition-colors cursor-pointer"
+              >
+                <WhatsAppIcon className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
@@ -181,6 +191,17 @@ export const Footer: React.FC = () => {
                   className="text-brand-gray-400 hover:text-brand-orange transition-colors"
                 >
                   {companyData.phone}
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <WhatsAppIcon className="w-4 h-4 text-green-500 flex-shrink-0" />
+                <a
+                  href={companyData.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-brand-gray-400 hover:text-green-400 transition-colors"
+                >
+                  {companyData.whatsapp} (WhatsApp)
                 </a>
               </li>
             </ul>

@@ -15,6 +15,8 @@ describe('Contact Component', () => {
   it('renders contact details and all required form fields', () => {
     render(<Contact />);
     expect(screen.getByText(/advisory@vanguardconsulting.com/i)).toBeInTheDocument();
+    expect(screen.getByText(/WhatsApp Fast Advisory/i)).toBeInTheDocument();
+    expect(screen.getByText(/Start WhatsApp Chat/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Full Name/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Business Email/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Company Name/i)).toBeInTheDocument();

@@ -17,6 +17,8 @@ describe('Consultancy Data Configuration Integrity', () => {
     expect(companyData.name).toBeTruthy();
     expect(companyData.email).toContain('@');
     expect(companyData.phone).toBeTruthy();
+    expect(companyData.whatsapp).toBeTruthy();
+    expect(companyData.whatsappUrl).toContain('wa.me');
     expect(companyData.address).toBeTruthy();
   });
 

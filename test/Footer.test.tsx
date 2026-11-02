@@ -5,11 +5,13 @@ import { Footer } from '../src/components/sections/Footer';
 import { companyData } from '../src/data/consultancyData';
 
 describe('Footer Component', () => {
-  it('renders company information and contact details', () => {
+  it('renders company information and contact details including WhatsApp', () => {
     render(<Footer />);
     expect(screen.getByText('VANGUARD')).toBeInTheDocument();
     expect(screen.getByText(companyData.address)).toBeInTheDocument();
     expect(screen.getByText(companyData.email)).toBeInTheDocument();
+    expect(screen.getAllByText((content) => content.includes(companyData.whatsapp)).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByLabelText(/Chat on WhatsApp/i)).toBeInTheDocument();
   });
 
   it('renders quick navigation links and service links', () => {
