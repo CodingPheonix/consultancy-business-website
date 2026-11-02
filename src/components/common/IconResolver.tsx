@@ -1,0 +1,86 @@
+import React from 'react';
+import {
+  Briefcase,
+  Compass,
+  Cpu,
+  TrendingUp,
+  Code,
+  Zap,
+  HeartPulse,
+  Landmark,
+  Factory,
+  ShoppingBag,
+  Terminal,
+  GraduationCap,
+  ShieldCheck,
+  Crosshair,
+  BarChart3,
+  Handshake,
+  ArrowRight,
+  CheckCircle2,
+  ChevronDown,
+  ChevronUp,
+  ChevronLeft,
+  ChevronRight,
+  Menu,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ExternalLink,
+  Award,
+  Users,
+  Target,
+  Sparkles,
+  Layers,
+  HelpCircle,
+  type LucideProps
+} from 'lucide-react';
+
+export const iconMap: Record<string, React.ComponentType<LucideProps>> = {
+  Briefcase,
+  Compass,
+  Cpu,
+  TrendingUp,
+  Code,
+  Zap,
+  HeartPulse,
+  Landmark,
+  Factory,
+  ShoppingBag,
+  Terminal,
+  GraduationCap,
+  ShieldCheck,
+  Crosshair,
+  BarChart3,
+  Handshake,
+  ArrowRight,
+  CheckCircle2,
+  ChevronDown,
+  ChevronUp,
+  ChevronLeft,
+  ChevronRight,
+  Menu,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ExternalLink,
+  Award,
+  Users,
+  Target,
+  Sparkles,
+  Layers,
+  HelpCircle,
+};
+
+interface IconResolverProps extends LucideProps {
+  name: string;
+}
+
+export const IconResolver: React.FC<IconResolverProps> = ({ name, ...props }) => {
+  const Component = iconMap[name] || Briefcase;
+  return <Component aria-hidden="true" {...props} />;
+};
